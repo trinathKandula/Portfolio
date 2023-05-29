@@ -1,0 +1,57 @@
+
+#!/bin/bash
+password='Trinath123' #
+echo " Creating a "Staging" database";
+sudo mysql -u boss -p${password} <<EOF #logging into mysql server
+drop database if exists Staging;
+#code to create a staging and production databases
+CREATE DATABASE Staging;
+use Staging;
+CREATE TABLE tasks(
+task_id INT NOT NULL AUTO_INCREMENT primary key,
+title VARCHAR(255) NOT NULL,
+start_date DATE,
+due_date DATE,
+status TINYINT NOT NULL,
+priority TINYINT NOT NULL,
+description TEXT);
+EOF
+echo "Staging table created";
+
+echo "Creating a Production database";
+sudo mysql -u boss -p${password} <<EOF
+DROP DATABASE IF EXISTS Production;
+CREATE DATABASE Production;
+USE Production;
+CREATE TABLE completed (
+task_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+task_name VARCHAR(255) NOT NULL,
+finished_date DATE,
+status TEXT,
+description TEXT);
+EOF
+echo " Production table Created";
+sudo mysql -u boss -p${password} <<EOF
+echo "inserting data into table "tasks" in "Staging" database";
+use staging; 
+INSERT INTO tasks (title, start_date, due_date, status, priority, description) 
+VALUES('task1', '2020-07-01', '2020-07-31', 1, 1, 'this is the first task'),
+VALUES('task2', '2020-08-01', '2020-08-31', 2, 2, 'this is the second task'),
+VALUES('task3', '2020-09-01', '2020-09-30', 1, 1, 'this is the third task'),
+VALUES('task4', '2020-10-01', '2020-10-31', 1, 1, 'this is fourth task');
+EOF
+
+echo "Data inserted into tasks table successfully";
+sudo mysql -u boss -p${password} <<EOF
+use production; 
+\
+EOF
+
+echo "Data inserted into "completed" table successfully";
+ 
+
+INSERT INTO tasks (title, start_date, due_date, status, priority, description)
+VALUES('task1', '2020-07-01', '2020-07-31', 1, 1, 'this is the first task'),
+      ('task2', '2020-08-01', '2020-08-31', 2, 2, 'this is the second task'),
+      ('task3', '2020-09-01', '2020-09-30', 1, 1, 'this is the third task'),
+      ('task4', '2020-10-01', '2020-10-31', 1, 1, 'this is fourth task');
