@@ -1,0 +1,3446 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/24/2022 4:15:57 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ML-RefVm-361229"
+  DTS:CreatorName="ML-RefVm-361229\Student"
+  DTS:DTSID="{D1D39976-E4DD-4461-905C-E17B7AA64EAE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{459E49A8-311D-42D5-9EA0-BF447BDBB0A1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9CBB00CB-F399-4554-8BA8-1DC5875A1A31}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\SalesDetails_NorthAmerica.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{1C0AB07C-B218-4A3B-A18E-B919A89F5784}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{0F592440-38B5-4A5D-A2CA-3422E64260F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQuantity"
+              DTS:DTSID="{508AA33A-D4BC-4BF7-986C-1864D55C50EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxAmt"
+              DTS:DTSID="{1C948426-2998-4017-8955-46152F2DABD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{4866A56F-62BF-4A29-9FF3-29DC46C61F1D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{71DC0D68-1536-414A-84E3-2CF337D27FD2}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\SalesDetails_Others.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{18988DDF-2B7B-40D0-B0EE-5839E93BB893}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{A12991EA-2DD0-4542-9220-6B48DF3E04AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{237AA1AA-75E4-4C8A-8BAC-EA2B7BE9C83A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{70E5DEAD-7281-4BD9-8269-5C60F7239DB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{BAC4D7B8-E203-4FC1-94D9-7E0B26BD0A7D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{33D89D4F-3382-4531-8AFF-2BDA2739A072}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\sample.csv.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{0EA8925D-5C54-4BAA-8C50-95A4B5E8352C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{6A584661-4494-4530-9E90-03627B59F9DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{7479CE74-9348-4C53-B422-32F55F181A5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{2EC266A6-CE08-4B2F-82CA-C3B080F8132F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{E15E2DFB-91A3-4D4D-A85A-93A5595C4271}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1"
+              DTS:DTSID="{3720E323-274D-4CBD-8462-2A29BDCCB97F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{783D246B-4B70-466B-8938-8DF62AB65520}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\sample.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{EB0F57AD-07AC-4713-A7EF-6752B5E2EAB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{40981DE3-61F5-409F-B94C-BC82E52A3424}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{3F5691C2-D370-4B81-8C64-2F4AF758AD15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{BB616E8A-108B-48D5-A19A-5CD0ACFE7E02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{DB7246BA-7C41-4AA4-BE69-AFB3C7565E00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="19"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1"
+              DTS:DTSID="{698255B0-6AD5-422C-B8A6-CF44553B462E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FE3A9254-3D34-4378-AA49-A84D56C09268}"
+      DTS:ObjectName="Flat File Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\sample.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{061C451C-B9D8-4276-A388-B35ED5AA57D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{4A42DB65-B296-4FEE-A02E-97FF11D1DE5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQuantity"
+              DTS:DTSID="{788F1C51-D82B-4FB7-9D13-B713E44B48C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{ACDE4708-B2AB-4B4D-9D26-BCAA3FBF5A10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{870B5E9F-3136-42F4-A90A-50024D727D93}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 5]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{63E661ED-11E5-4330-924A-6A6F6CE77C50}"
+      DTS:ObjectName="Flat File Connection Manager 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\SalesDetails_NorthAmerica.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{533D9F86-CAD5-4301-8819-97F5B2C6921A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{A552DBF7-D780-4620-B362-4126FBF29F08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{423A9DDC-9A39-4BF4-AEFA-F56FE9A3D1D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{09EA100E-1377-42F4-B60D-63FE7A5742DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{10B0D05E-E4AC-4D56-A6DC-4771C9D643EC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 6]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{164E3AA7-CBF9-4CB3-AD92-1AFDC9D2D320}"
+      DTS:ObjectName="Flat File Connection Manager 6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\SalesDetails_NorthAmerica.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{35A668B8-A3E3-42F9-9629-42A1793D422F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{94E022E3-6A9F-4CD8-937A-68388D7BFF96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{3BE73DE4-CCC1-4626-9E0A-099DB14A151F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{F67CBB7A-A287-48F4-B6C0-7B5C87D3C4BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{0D6FD5B3-6624-4A57-9C02-C7DFBD49590B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 7]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A9331CD5-546B-4EEA-BFC1-156BA81F0C6A}"
+      DTS:ObjectName="Flat File Connection Manager 7">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\SalesDetails_Others.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{CAC735D6-CC1E-4F8A-80D4-D6E1C8A6D715}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{3C0EAB39-41BC-4EC5-AF53-A0B2245F495E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQty"
+              DTS:DTSID="{CA8F0F19-6B64-4C7C-B3D0-60C2B8004767}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{63D554B0-E8A0-4457-A031-085116A8FC1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryID"
+              DTS:DTSID="{405FF6C4-3325-416B-8A9F-81B37099D816}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 8]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4A201AC5-1FD8-4D81-8A28-F5458BA926AC}"
+      DTS:ObjectName="Flat File Connection Manager 8">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\north table\New Text Document.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{E8F0C387-F901-4556-8094-D9CA43745903}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{32C789C9-22A0-4E89-9B94-8935AC9BA583}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQuantity"
+              DTS:DTSID="{1E0397FD-F0BA-4A58-9FE9-4080C42275A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{32F1F4E2-A3E9-4B62-B141-5A74DE698C58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Union All.TerritoryID"
+              DTS:DTSID="{D6A05FE8-6D2F-4DC8-9B24-AFF2842045C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{28E5D01E-582B-49F2-A08F-A1E7B96643CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="34"
+              DTS:DataScale="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxAmt"
+              DTS:DTSID="{36CC6552-C056-4447-BBC9-608775C6E48E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="30"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalSales"
+              DTS:DTSID="{B90758E8-D875-493F-9598-C0405A7B350A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tax Amt"
+              DTS:DTSID="{DFFB9DC6-76A9-4415-BD44-7D6D732AA23B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Sales"
+              DTS:DTSID="{2E3F7F06-384D-4F85-8790-07DCDE5DEB9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryI D"
+              DTS:DTSID="{4923C24E-BA92-4099-A032-98771689E668}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copy of ProductID"
+              DTS:DTSID="{20FE8A53-7F79-4B30-AB7A-BAACED5F9FA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup 1.TerritoryID"
+              DTS:DTSID="{19046D06-B7F6-4967-9CF3-6B95B94ED224}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{F025D1F7-DCEA-4543-A623-C9E28C17ACAA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 9]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1499BCAB-3781-4B16-9AC0-526F80CF6985}"
+      DTS:ObjectName="Flat File Connection Manager 9">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Student\Downloads\north table\north.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesOrderID"
+              DTS:DTSID="{D3EA0045-B5AD-4A60-89FC-03559E8DBDD2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{6BEB4907-330E-4DFC-B0DE-7D976305CADD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderQuantity"
+              DTS:DTSID="{8AC83D1A-6A21-4B67-92DA-4809F9329616}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{6F901EC5-F1BD-4C59-920B-3C82225EE55F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Union All.TerritoryID"
+              DTS:DTSID="{636AF262-96AD-4C2F-9DE9-9B76DF8447C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{3444FCD0-97DC-420F-8B6D-B54C64C282B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="34"
+              DTS:DataScale="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxAmt"
+              DTS:DTSID="{F7727B18-8009-48F1-B768-D7DC9A3313EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="30"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalSales"
+              DTS:DTSID="{C7BA21A4-24CA-407C-920F-2423A0D0F970}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tax Amt"
+              DTS:DTSID="{CC5BEC9B-4022-4AA9-81A4-54E6F887F30D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Sales"
+              DTS:DTSID="{07131EBF-285C-4A62-A976-793E677BE3AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TerritoryI D"
+              DTS:DTSID="{B6B2633D-FD10-4769-9C78-66219B34CBA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Copy of ProductID"
+              DTS:DTSID="{B46AB614-8FE3-453F-83D8-2E4F13767C7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup 1.TerritoryID"
+              DTS:DTSID="{B85A294E-D7DD-488A-A8D3-3533140D1913}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{9ABB726E-B31A-4488-A8A6-D3AD8DBE4909}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8BDB034C-EF98-4900-BEE5-82D4C85374EB}"
+      DTS:ObjectName="LocalHost.AdventureWorks2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=AdventureWorks2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{8BDB034C-EF98-4900-BEE5-82D4C85374EB}LocalHost.AdventureWorks2019;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SalesDetails_NorthAmerica Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7633C4B2-4006-43F2-99F1-CA7381300AB2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SalesDetails_NorthAmerica Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input].Columns[TerritoryI D]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryI D"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]} &lt;= 6</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[TerritoryI D] &lt;= 6</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Case 2]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 2"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]} &gt; 6</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[TerritoryI D] &gt; 6</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input].Columns[TaxAmt]"
+                      cachedDataType="numeric"
+                      cachedName="TaxAmt"
+                      cachedPrecision="34"
+                      cachedScale="5"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input].Columns[TotalSales]"
+                      cachedDataType="numeric"
+                      cachedName="TotalSales"
+                      cachedPrecision="30"
+                      cachedScale="2"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output].Columns[TotalSales]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input].Columns[TerritoryID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TerritoryID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input].Columns[SalesOrderID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[SalesOrderID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Tax Amt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Tax Amt]"
+                      name="Tax Amt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Total Sales]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Total Sales]"
+                      name="Total Sales"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output].Columns[TotalSales]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]"
+                      name="TerritoryI D"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[TerritoryID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductID]"
+                      name="Copy of ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SalesOrderID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SalesOrderID]"
+                      name="Copy of SalesOrderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Inputs[Derived Column Input].Columns[OrderQuantity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderQty"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]"
+                      name="OrderQuantity" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Inputs[Derived Column Input].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]"
+                      name="Sales"
+                      precision="38"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DECIMAL,2)#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]} * (DT_DECIMAL,2)#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DECIMAL,2)OrderQuantity * (DT_DECIMAL,2)UnitPrice</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Inputs[Derived Column Input].Columns[Sales]"
+                      cachedDataType="numeric"
+                      cachedName="Sales"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]"
+                      name="TaxAmt"
+                      precision="34"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">0.155 * (DT_DECIMAL,2)#{Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">0.155 * (DT_DECIMAL,2)Sales</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Inputs[Derived Column Input].Columns[Sales]"
+                      cachedDataType="numeric"
+                      cachedName="Sales"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Inputs[Derived Column Input].Columns[TaxAmt]"
+                      cachedDataType="numeric"
+                      cachedName="TaxAmt"
+                      cachedPrecision="34"
+                      cachedScale="5"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output].Columns[TotalSales]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output].Columns[TotalSales]"
+                      name="TotalSales"
+                      precision="30"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DECIMAL,2)#{Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]} + (DT_DECIMAL,2)#{Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DECIMAL,2)Sales + (DT_DECIMAL,2)TaxAmt</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Production].[Product]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Production].[Product]) [refTable]
+where [refTable].[ProductID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductNumber" dataType="DT_WSTR" length="25" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MakeFlag" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FinishedGoodsFlag" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Color" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SafetyStockLevel" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ReorderPoint" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StandardCost" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ListPrice" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Size" dataType="DT_WSTR" length="5" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SizeUnitMeasureCode" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeightUnitMeasureCode" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Weight" dataType="DT_NUMERIC" length="0" precision="8" scale="2" codePage="0"/&gt;&lt;referenceColumn name="DaysToManufacture" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductLine" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Class" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Style" dataType="DT_WSTR" length="2" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductSubcategoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ProductModelID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SellStartDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SellEndDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DiscontinuedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rowguid" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ModifiedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup.Inputs[Lookup Input].Columns[Copy of ProductID]"
+                      cachedDataType="i4"
+                      cachedName="Copy of ProductID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ProductID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ProductID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Match Output].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Match Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProductID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Match Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Match Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Lookup 1"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup 1"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Sales].[SalesTerritory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Sales].[SalesTerritory]) [refTable]
+where [refTable].[TerritoryID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TerritoryID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountryRegionCode" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Group" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesYTD" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalesLastYear" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CostYTD" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CostLastYear" dataType="DT_CY" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="rowguid" dataType="DT_GUID" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ModifiedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Inputs[Lookup Input].Columns[TerritoryI D]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryI D"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">TerritoryID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">TerritoryID</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SalesNorth]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrderQty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderQty"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderQuantity]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sales]"
+                      cachedDataType="numeric"
+                      cachedName="Sales"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TaxAmt]"
+                      cachedDataType="numeric"
+                      cachedName="TaxAmt"
+                      cachedPrecision="34"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TotalSales]"
+                      cachedDataType="numeric"
+                      cachedName="TotalSales"
+                      cachedPrecision="30"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalSales]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output].Columns[TotalSales]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TerritoryI D]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryI D"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryName]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SalesOrderID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of SalesOrderID"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SalesOrderID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderID]"
+                      dataType="wstr"
+                      length="50"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderQuantity]"
+                      dataType="numeric"
+                      name="OrderQuantity"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      dataType="r4"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      dataType="r4"
+                      name="Sales" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TotalSales]"
+                      dataType="cy"
+                      name="TotalSales" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="TerritoryName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[SalesOthers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.AdventureWorks2019]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[OrderQty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderQty"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[OrderQuantity]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Sales]"
+                      cachedDataType="numeric"
+                      cachedName="Sales"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output].Columns[Sales]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[TaxAmt]"
+                      cachedDataType="numeric"
+                      cachedName="TaxAmt"
+                      cachedPrecision="34"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[TotalSales]"
+                      cachedDataType="numeric"
+                      cachedName="TotalSales"
+                      cachedPrecision="30"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TotalSales]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output].Columns[TotalSales]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[TerritoryI D]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryI D"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[TerritoryI D]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryName]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Copy of SalesOrderID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of SalesOrderID"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SalesOrderID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SalesOrderID]"
+                      dataType="wstr"
+                      length="50"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[OrderQuantity]"
+                      dataType="numeric"
+                      name="OrderQuantity"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      dataType="r4"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                      dataType="r4"
+                      name="Sales" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TotalSales]"
+                      dataType="cy"
+                      name="TotalSales" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[TerritoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="TerritoryName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="SalesDetails_NorthAmerica"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 6]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 6]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[SalesOrderID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[SalesOrderID]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[SalesOrderID]"
+                      name="SalesOrderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[OrderQty]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[OrderQty]"
+                      name="OrderQty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[TerritoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[TerritoryID]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[SalesOrderID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OrderQty" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].ExternalColumns[TerritoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TerritoryID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="SalesDetails_Others"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 7]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 7]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[SalesOrderID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[SalesOrderID]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[SalesOrderID]"
+                      name="SalesOrderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[OrderQty]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[OrderQty]"
+                      name="OrderQty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[TerritoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[TerritoryID]"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[SalesOrderID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[OrderQty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OrderQty" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].ExternalColumns[TerritoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TerritoryID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SalesDetails_NorthAmerica Task\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1].Columns[SalesOrderID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[SalesOrderID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1].Columns[OrderQty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderQty"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[OrderQty]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[UnitPrice]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1].Columns[TerritoryID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TerritoryID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output].Columns[TerritoryID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[TerritoryID]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2].Columns[SalesOrderID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[SalesOrderID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2].Columns[OrderQty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OrderQty"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[OrderQty]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[UnitPrice]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2].Columns[TerritoryID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="TerritoryID"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output].Columns[TerritoryID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[TerritoryID]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[SalesOrderID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[SalesOrderID]"
+                      name="SalesOrderID" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[OrderQty]"
+                      name="OrderQty" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[UnitPrice]"
+                      name="UnitPrice" />
+                    <outputColumn
+                      refId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[TerritoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Case 1]"
+              endId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Case 1"
+              startId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Case 2]"
+              endId="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              name="Case 2"
+              startId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Outputs[Case 2]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Data Conversion Output]"
+              endId="Package\SalesDetails_NorthAmerica Task\Multicast.Inputs[Multicast Input 1]"
+              name="Data Conversion Output"
+              startId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Derived Column Output]"
+              endId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\SalesDetails_NorthAmerica Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Derived Column Output1]"
+              endId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\SalesDetails_NorthAmerica Task\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Derived Column Output2]"
+              endId="Package\SalesDetails_NorthAmerica Task\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\SalesDetails_NorthAmerica Task\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Flat File Source Output]"
+              endId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 1]"
+              name="Flat File Source Output"
+              startId="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Flat File Source Output1]"
+              endId="Package\SalesDetails_NorthAmerica Task\Union All.Inputs[Union All Input 2]"
+              name="Flat File Source Output"
+              startId="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Lookup Match Output]"
+              endId="Package\SalesDetails_NorthAmerica Task\Conditional Split.Inputs[Conditional Split Input]"
+              name="Lookup Match Output"
+              startId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Multicast Output 1]"
+              endId="Package\SalesDetails_NorthAmerica Task\Lookup.Inputs[Lookup Input]"
+              name="Multicast Output 1"
+              startId="Package\SalesDetails_NorthAmerica Task\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Multicast Output 2]"
+              endId="Package\SalesDetails_NorthAmerica Task\Lookup 1.Inputs[Lookup Input]"
+              name="Multicast Output 2"
+              startId="Package\SalesDetails_NorthAmerica Task\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\SalesDetails_NorthAmerica Task.Paths[Union All Output 1]"
+              endId="Package\SalesDetails_NorthAmerica Task\Derived Column.Inputs[Derived Column Input]"
+              name="Union All Output 1"
+              startId="Package\SalesDetails_NorthAmerica Task\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="240,42"
+          Id="Package\SalesDetails_NorthAmerica Task"
+          TopLeft="292,158" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SalesDetails_NorthAmerica Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Derived Column 1"
+          TopLeft="286,311.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Lookup 1"
+          TopLeft="307.5,719.5" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Derived Column 2"
+          TopLeft="286,413.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\SalesDetails_NorthAmerica Task\OLE DB Destination"
+          TopLeft="223,879" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1"
+          TopLeft="423,908" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\SalesDetails_NorthAmerica Task\SalesDetails_NorthAmerica"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Multicast"
+          TopLeft="308,617.5" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Data Conversion"
+          TopLeft="289,515.5" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\SalesDetails_NorthAmerica Task\SalesDetails_Others"
+          TopLeft="280,5.5" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Lookup"
+          TopLeft="132,719.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Derived Column"
+          TopLeft="290.5,209.5" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Union All"
+          TopLeft="308,107.5" />
+        <NodeLayout
+          Size="315,42"
+          Id="Package\SalesDetails_NorthAmerica Task\Conditional Split"
+          TopLeft="290,821.5" />
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Data Conversion Output]"
+          TopLeft="369.5,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Case 2]"
+          TopLeft="447.5,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.5,44.5"
+              Start="0,0"
+              End="68.5,37">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.25"
+                    Point2="0,22.25"
+                    Point3="4,22.25" />
+                  <mssgle:LineSegment
+                    End="64.5,22.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="64.5,22.25"
+                    Point2="68.5,22.25"
+                    Point3="68.5,26.25" />
+                  <mssgle:LineSegment
+                    End="68.5,37" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-13.6892578125,27.25,30.807265625,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Case 1]"
+          TopLeft="290,842.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21.5,36.5"
+              Start="0,0"
+              End="21.5,29">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="17.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.5,0"
+                    Point2="21.5,0"
+                    Point3="21.5,4" />
+                  <mssgle:LineSegment
+                    End="21.5,29" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-26.4392578125,-17.609375,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Union All Output 1]"
+          TopLeft="369.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Multicast Output 2]"
+          TopLeft="388.666666666667,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-19.1666666666666,60"
+              Start="0,0"
+              End="-19.1666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.46227929374" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.46227929374"
+                    Point2="0,24.46227929374"
+                    Point3="-4,24.46227929374" />
+                  <mssgle:LineSegment
+                    End="-15.1666666666666,24.46227929374" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-15.1666666666666,24.46227929374"
+                    Point2="-19.1666666666666,24.46227929374"
+                    Point3="-19.1666666666666,28.46227929374" />
+                  <mssgle:LineSegment
+                    End="-19.1666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Multicast Output 1]"
+          TopLeft="350.333333333333,659.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.833333333333,60"
+              Start="0,0"
+              End="-160.833333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.46227929374" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.46227929374"
+                    Point2="0,24.46227929374"
+                    Point3="-4,24.46227929374" />
+                  <mssgle:LineSegment
+                    End="-156.833333333333,24.46227929374" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156.833333333333,24.46227929374"
+                    Point2="-160.833333333333,24.46227929374"
+                    Point3="-160.833333333333,28.46227929374" />
+                  <mssgle:LineSegment
+                    End="-160.833333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Lookup Match Output]"
+          TopLeft="369.5,761.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78,60"
+              Start="0,0"
+              End="78,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="74,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74,30"
+                    Point2="78,30"
+                    Point3="78,34" />
+                  <mssgle:LineSegment
+                    End="78,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-44.24173828125,35,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Flat File Source Output1]"
+          TopLeft="369.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.1666666666666,60"
+              Start="0,0"
+              End="19.1666666666666,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.53772070626" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.53772070626"
+                    Point2="0,35.53772070626"
+                    Point3="4,35.53772070626" />
+                  <mssgle:LineSegment
+                    End="15.1666666666666,35.53772070626" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.1666666666666,35.53772070626"
+                    Point2="19.1666666666666,35.53772070626"
+                    Point3="19.1666666666666,39.53772070626" />
+                  <mssgle:LineSegment
+                    End="19.1666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Flat File Source Output]"
+          TopLeft="112.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="237.833333333333,60"
+              Start="0,0"
+              End="237.833333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.53772070626" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.53772070626"
+                    Point2="0,35.53772070626"
+                    Point3="4,35.53772070626" />
+                  <mssgle:LineSegment
+                    End="233.833333333333,35.53772070626" />
+                  <mssgle:CubicBezierSegment
+                    Point1="233.833333333333,35.53772070626"
+                    Point2="237.833333333333,35.53772070626"
+                    Point3="237.833333333333,39.53772070626" />
+                  <mssgle:LineSegment
+                    End="237.833333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Derived Column Output2]"
+          TopLeft="369.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Derived Column Output1]"
+          TopLeft="369.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SalesDetails_NorthAmerica Task.Paths[Derived Column Output]"
+          TopLeft="369.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesDetails_NorthAmerica Task\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Sales].[SalesTerritory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesDetails_NorthAmerica Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesDetails_NorthAmerica Task\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SalesDetails_NorthAmerica Task\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Production].[Product]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
